@@ -19,6 +19,7 @@ import {
   SiExpress,
   SiMongodb,
   SiMysql,
+  SiDocker,
 } from "react-icons/si";
 
 const about = {
@@ -84,6 +85,7 @@ const skills = {
     { icon: <FaFigma />, name: "Figma" },
     { icon: <FaGit />, name: "Git" },
     { icon: <FaBitbucket />, name: "Bitbucket" },
+    { icon: <SiDocker />, name: "Docker" },
   ],
 };
 
