@@ -21,7 +21,7 @@ export default function Photo() {
           className="size-[298px] xl:size-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/photo.png"
+            src="/assets/my-1.png"
             priority
             quality={100}
             fill
