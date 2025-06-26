@@ -29,7 +29,7 @@ const about = {
   info: [
     { fieldName: "Name", fieldValue: "Ngoc Thang" },
     { fieldName: "Phone", fieldValue: "(+84) 704 462 651" },
-    { fieldName: "Experience", fieldValue: "6 months" },
+    { fieldName: "Experience", fieldValue: "1 year" },
     { fieldName: "Nationality", fieldValue: "Viet Nam" },
     { fieldName: "Freelance", fieldValue: "Available" },
     { fieldName: "Language", fieldValue: "Vietnamese, English" },
@@ -40,13 +40,27 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description: `I specialize in front-end development, creating responsive and engaging user interfaces with modern web technologies. 
-  Below, I’ve outlined the key experiences and skills I’ve gained throughout my career.`,
+  description: `I specialize in front-end development, creating responsive and engaging user interfaces with modern web technologies.`,
   items: [
     {
-      company: "Freelancer",
-      position: "Frontend Developer (Next.Js)",
-      duration: "May 2023 - Dec 2023",
+      company: "TestGenAI",
+      position: "Front End Developer",
+      duration: "03/2025 - Current",
+    },
+    {
+      company: "Yoshida Corporate Ltd",
+      position: "Front End Developer",
+      duration: "02/2025 - 06/2025",
+    },
+    {
+      company: "The Black Artichoke",
+      position: "Front End Developer",
+      duration: "11/2024 - 04/2025",
+    },
+    {
+      company: "TMA Solutions",
+      position: "Frontend Developer Intern",
+      duration: "06/2024 - 09/2024",
     },
   ],
 };
@@ -55,7 +69,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Here is a summary of my educational background and the relevant courses I’ve completed.",
+    "Here is a summary of my educational background and the relevant courses I've completed.",
   items: [
     {
       company: "IUH",
@@ -145,7 +159,6 @@ export default function Resume() {
                         {item.position}
                       </h3>
                       <div className="flex items-center gap-3">
-                        {/* dot */}
                         <span className="size-[6px] rounded-full bg-accent"></span>
                         <p className="text-white/60">{item.company}</p>
                       </div>

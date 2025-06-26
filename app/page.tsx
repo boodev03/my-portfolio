@@ -2,7 +2,7 @@ import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
-import { FiDownload } from "react-icons/fi";
+import { FiArrowRight, FiDownload, FiEye } from "react-icons/fi";
 export default function HomePage() {
   return (
     <section className="h-full">
@@ -15,9 +15,15 @@ export default function HomePage() {
               <span className="text-accent">Ngoc Thang</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I am a Web Developer with experience in creating user-friendly and
-              efficient web applications. I enjoy working with modern
-              technologies to build responsive and well-functioning websites.
+              I'm a full-stack developer passionate about building intuitive and
+              responsive web applications. I specialize in React, Next.js,
+              TypeScript, and Tailwind CSS on the frontend, with experience in
+              Node.js and NestJS for backend development.
+              <br />
+              <br />
+              Recently, I've also been exploring the world of Web3 and
+              blockchain development to expand my knowledge and stay updated
+              with modern tech trends.
             </p>
 
             {/* Button and socials */}
@@ -26,9 +32,16 @@ export default function HomePage() {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
+                asChild
               >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
+                <a
+                  href="https://drive.google.com/file/d/1Z8GvXWFYqX4KGF_Ww2wigiYLY82l8IQ3/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>My Resume</span>
+                  <FiArrowRight className="text-xl" />
+                </a>
               </Button>
 
               <div className="mb-8 xl:mb-0">

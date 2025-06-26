@@ -14,16 +14,36 @@ export default function WorkSliderBtns({
   iconStyles,
 }: IProps) {
   const swiper = useSwiper();
+
+  const handlePrev = () => {
+    if (swiper && typeof swiper.slidePrev === "function") {
+      swiper.slidePrev();
+    }
+  };
+
+  const handleNext = () => {
+    if (swiper && typeof swiper.slideNext === "function") {
+      swiper.slideNext();
+    }
+  };
+
   return (
     <div className={containerStyles}>
-      <button className={btnStyles} onClick={() => swiper.slidePrev()}>
+      <button
+        className={btnStyles}
+        onClick={handlePrev}
+        type="button"
+        aria-label="Previous slide"
+      >
         <PiCaretLeftBold className={iconStyles} />
       </button>
-      <button className={btnStyles}>
-        <PiCaretRightBold
-          className={iconStyles}
-          onClick={() => swiper.slideNext()}
-        />
+      <button
+        className={btnStyles}
+        onClick={handleNext}
+        type="button"
+        aria-label="Next slide"
+      >
+        <PiCaretRightBold className={iconStyles} />
       </button>
     </div>
   );

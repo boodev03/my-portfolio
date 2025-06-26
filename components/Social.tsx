@@ -7,10 +7,8 @@ import {
 } from "react-icons/fa";
 
 const socials = [
-  { icon: <FaGithub />, path: "https://github.com/rotcivNT" },
-  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/rotciv-dev/" },
-  { icon: <FaFacebook />, path: "https://www.facebook.com/r0tc1v" },
-  { icon: <FaInstagram />, path: "https://www.instagram.com/r0tc1v0908/" },
+  { icon: <FaGithub />, path: "https://github.com/boodev03" },
+  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/boodev/" },
 ];
 
 interface IProps {

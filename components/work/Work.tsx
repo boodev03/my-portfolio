@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight } from "react-icons/bs";
+import "swiper/css";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import {
   Tooltip,
@@ -10,23 +12,60 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
-import "swiper/css";
-import Image from "next/image";
 import WorkSliderBtns from "../WorkSliderBtns";
 
 const projects = [
   {
     num: "01",
-    category: "Fullstack",
-    title: "TBoost",
+    category: "TestGenAI",
+    title: "TestGenAI",
     description:
-      "TBoost is a free application designed to facilitate seamless real-time communication and collaboration among team members. It supports messaging, video calls, channels, file sharing, notifications, and task management",
+      "An AI-powered test generation platform built with modern React stack. Team of 4 members. Created reusable components to enhance efficiency in future projects. Collaborated with back-end developer to seamlessly integrate user interface elements and with tester to verify, identify, and resolve bugs and performance issues. Integrated front-end code with server-side logic to deliver dynamic web pages.",
     stack: [
       {
         name: "Next.js",
       },
       {
-        name: "Typescript",
+        name: "TypeScript",
+      },
+      {
+        name: "TailwindCSS",
+      },
+      {
+        name: "shadcn/ui",
+      },
+      {
+        name: "Supabase",
+      },
+      {
+        name: "Langchain",
+      },
+      {
+        name: "React Query",
+      },
+      {
+        name: "Zustand",
+      },
+      {
+        name: "Git",
+      },
+    ],
+    image: "/assets/work/testgenai.jpg",
+    live: "https://testgenai.com",
+    github: "",
+  },
+  {
+    num: "02",
+    category: "Yoshida Corporate Ltd",
+    title: "Yoshida Corporate Ltd",
+    description:
+      "Developed responsive corporate and recruitment websites using Next.js with bilingual support in Japanese and English. Solo project. Converted Figma designs into reusable, pixel-perfect components using shadcn/ui. Designed and integrated a custom CMS for dynamic content management, including case studies and recruitment information. Leveraged Firebase services for scalable database management and secure authentication. Applied on-page SEO best practices for Next.js, focusing on international SEO and performance optimization.",
+    stack: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "TypeScript",
       },
       {
         name: "Tailwind CSS",
@@ -35,61 +74,89 @@ const projects = [
         name: "shadcn/ui",
       },
       {
-        name: "SCSS",
+        name: "Zustand",
       },
       {
-        name: "Nest.js",
+        name: "React Query",
       },
       {
-        name: "MongoDB",
+        name: "Firebase",
       },
       {
-        name: "Cloudflare R2",
-      },
-      {
-        name: "RabbitMQ",
+        name: "Git",
       },
     ],
-    image: "/assets/work/thumb1.png",
-    live: "https://www.tboost.click/",
-    github: "https://github.com/rotcivNT/t-boost",
-  },
-  {
-    num: "02",
-    category: "Front-end",
-    title: "Weather app",
-    description: "National And Local Weather - Weekly Weather Forecast",
-    stack: [
-      {
-        name: "HTML",
-      },
-      {
-        name: "CSS",
-      },
-      {
-        name: "Javascript",
-      },
-    ],
-    image: "/assets/work/thumb2.png",
-    live: "https://thang-weather-app.netlify.app/",
+    image: "/assets/work/ysd-cor.png",
+    live: "https://ysd-k.co.jp",
     github: "",
   },
   {
     num: "03",
-    category: "Front-end",
-    title: "Travel agency",
+    category: "The Black Artichoke",
+    title: "The Black Artichoke",
     description:
-      "A travel agency project, featuring an interactive user interface for browsing destinations, selecting vacation packages, and booking trips effortlessly.",
+      "Created responsive user interface with Next.js and Tailwind CSS, enhancing user experience across devices. Team of 3 members. Converted Figma designs into reusable, pixel-perfect components using shadcn/ui. Developed custom CMS utilizing Supabase, enabling client to manage blog content independently. Collaborated with team using Git for version control, ensuring code quality and efficient workflows.",
     stack: [
       {
-        name: "HTML",
+        name: "Next.js",
       },
       {
-        name: "CSS",
+        name: "TypeScript",
+      },
+      {
+        name: "Tailwind CSS",
+      },
+      {
+        name: "React Query",
+      },
+      {
+        name: "Zustand",
+      },
+      {
+        name: "shadcn/ui",
+      },
+      {
+        name: "Supabase",
+      },
+      {
+        name: "Git",
       },
     ],
-    image: "/assets/work/thumb3.jpg",
-    live: "https://thang-travel.netlify.app/",
+    image: "/assets/work/theblackartichoke.png",
+    live: "https://theblackartichoke.com",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "sGas",
+    title: "sGas",
+    description:
+      "Frontend Developer Internship project focused on modern React development practices. Built responsive web applications using React.js and JavaScript. Gained experience in component-based architecture, state management with Redux Toolkit, and collaborative development with Git version control. Converted Figma designs into pixel-perfect user interfaces using Material UI components.",
+    stack: [
+      {
+        name: "React.js",
+      },
+      {
+        name: "Vite",
+      },
+      {
+        name: "Redux",
+      },
+      {
+        name: "Redux Toolkit",
+      },
+      {
+        name: "Material UI",
+      },
+      {
+        name: "Figma",
+      },
+      {
+        name: "Git",
+      },
+    ],
+    image: "/assets/work/sGas.png",
+    live: "",
     github: "",
   },
 ];
@@ -122,7 +189,7 @@ export default function Work() {
               </div>
               {/* Category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.category}
               </h2>
               {/* Description */}
               <p className="text-white/60">{project.description}</p>
@@ -153,19 +220,6 @@ export default function Work() {
                   </TooltipProvider>
                 </Link>
                 {/* Github */}
-
-                <Link href={project.github} target="_blank">
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger className="size-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
               </div>
             </div>
           </div>
@@ -187,7 +241,7 @@ export default function Work() {
                       <Image
                         src={project.image}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         alt=""
                       />
                     </div>
